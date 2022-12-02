@@ -73,7 +73,7 @@
 # #print(valorGorjeta)
 
 
-def soma(numero1, numero2):
+"""def soma(numero1, numero2):
     return float(numero1) + float(numero2)
 
 def subtração(numero1, numero2):
@@ -81,15 +81,18 @@ def subtração(numero1, numero2):
 
 def divisão(numero1, numero2):
     if (numero2 == "0"):
+        global repetir
+        repetir = True
         return "O número 2 não pode ser 0"
     else:
         return float(numero1) / float(numero2)
+
 
 def multiplicação(numero1, numero2):
     return float(numero1) * float(numero2)
 
 def calculadora(n1,n2,op):
-    
+   
     if(op == "+"):
         print(soma(n1,n2))
 
@@ -113,7 +116,7 @@ while (repetir):
 
     num1 = input("Digite o primeiro valor: ")
     num2 = input("Digite o segundo valor: ")
-    operador = input("Digite o operador (+,-,/.,*): ")
+    operador = input("Digite o operador (+,-,/,*): ")
 
     if (num1.isnumeric()) and (num2.isnumeric()):
         calculadora(num1, num2, operador)
@@ -121,3 +124,59 @@ while (repetir):
     else:
         print("O usuário digitou números inválidos!")
         repetir = True
+"""
+
+# def e(b):
+#     a = b*b
+#     return a #variável local; return = encerra a função
+
+# a = 10 #variável global
+# e(a)
+# e(a)
+# print(e(a))
+
+#1Faça uma função que retorne o reverso de um número inteiro informado. Por exemplo: 127 -> 721
+
+"""
+def inverter(n):
+    inverso = ""
+
+    for i in range(len(n)):
+
+        inverso += n[(len(n)-1)-i]
+        print(inverso)
+
+    print("O número invertido é", inverso)
+
+numero = input("Digite o número a ser invertido: ")
+
+inverter(numero)
+"""
+
+#2 Número de digitos
+
+"""def digitos(n):
+    s = str(n)
+    print(len(s))
+
+n_dig = input("Digite os digitos: ")
+
+digitos(n_dig)
+"""
+
+#3 Potenciação
+
+def potencia(base, expoente):
+    resultado = 1
+
+    for numero in range(1, expoente+1):
+        resultado = resultado * base
+
+    return resultado
+
+B = input("Digite a base da potenciação: ")
+E = input("Digite o expoente da potenciação: ")
+
+print(potencia(int(B), int(E)))
+
+
